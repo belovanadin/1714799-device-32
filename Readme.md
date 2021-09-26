@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Надежда Белова](https://up.htmlacademy.ru/htmlcss/32/user/1714799).
-* Наставник: `Сергей Артёмов`.
+* Наставник: `Сергей Артёмов`(https://htmlacademy.ru/profile/firefoxic).
 
 ---
 
