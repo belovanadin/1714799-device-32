@@ -17,7 +17,10 @@
 
       <ul class="users-navigation">
         <li class="navigation-item">
-        <a class="navigation-link" href="#">Войти</a>
+          <a class="navigation-link" href="#">Коля Петухов</a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link" href="#">Выйти</a>
         </li>
         <li class="navigation-item">
            <a class="navigation-link" href="#">Сравнить</a>
@@ -29,7 +32,7 @@
       <nav class="page-navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link" href="catalog.html">Каталог товаров</a>
+            <a class="navigation-link" href="#">Каталог товаров</a>
             <button class="dropdwn" name="button" type="submit">+</button>
             <ul class="dropdown-catalog">
               <li class="dropdown-catalog-item">
@@ -42,7 +45,7 @@
                 <a href="#">Квадрокоптеры</a>
               </li>
               <li class="dropdown-catalog-item">
-                <a href="catalog.html">Моноподы для селфи</a>
+                <a href="catalog.html" aria-current="page">Моноподы для селфи</a>
               </li>
               <li class="dropdown-catalog-item">
                 <a href="#">Умные часы</a>
@@ -69,8 +72,8 @@
         <h2 class="inner-header-title">Моноподы для селфи</h2>
         <ul class="breadcrumbs-list">
           <li class="breadcrumbs-item"><a href="index.html" class="breadcrumbs-link">Главная</a></li>
-          <li class="breadcrumbs-item"><a href="catalog.html" class="breadcrumbs-link">Каталог товаров</a></li>
-          <li class="breadcrumbs-item"><a href="#" class="breadcrumbs-link">Моноподы для селфи</a></li>
+          <li class="breadcrumbs-item"><a href="#" class="breadcrumbs-link">Каталог товаров</a></li>
+          <li class="breadcrumbs-item"><a href="catalog.html" class="breadcrumbs-link">Моноподы для селфи</a></li>
         </ul>
       </div>
       <section class="filter-section">
@@ -84,11 +87,11 @@
             <button class="range-toggle toggle-max" type="button">
               <span class="visually-hidden">Изменить максимальную цену.</span>
             </button>
-            <label class="catalog-filter-label">
-              <input class="catalog-filter-input" type="number" name="min-price" placeholder="от 0 ₽">
+            <label class="catalog-filter-label">от 0
+              <input class="catalog-filter-input" type="number" name="min-price" value="0">
             </label>
-            <label class="catalog-filter-label">
-               <input class="catalog-filter-input" type="number" name="max-price" placeholder="до 5000 ₽">
+            <label class="catalog-filter-label">до 5000
+               <input class="catalog-filter-input" type="number" name="max-price" value="5000">
             </label>
           </fieldset>
           <fieldset class="catalog-filter-group">
@@ -136,13 +139,15 @@
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="visually-hidden control-input" type="radio" name="product-group" value="bluetooth-exists"
+                  <input class="visually-hidden control-input" type="radio" name="bluetooth" value="true"
                          checked>
                   <span class="control-mark"></span>
                   <span class="control-label">Есть</span>
                 </label>
+              </li>
+              <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="visually-hidden control-input" type="radio" name="product-group" value="bluetooth-exists">
+                  <input class="visually-hidden control-input" type="radio" name="bluetooth" value="false">
                   <span class="control-mark"></span>
                   <span class="control-label">Нет</span>
                 </label>
@@ -167,32 +172,40 @@
         <ol class="product-list">
           <li class="product-item">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="#" width="360" height="380" alt="Любительская селфи-палка">
-              <h3 class="product-card-title">Любительская селфи-палка</h3>
+              <figure>
+                <img class="product-card-image" src="#" width="360" height="380" alt="Cелфи-палка для получения великолепных фото">
+                <figcaption>Любительская селфи-палка</figcaption>
+              </figure>
               <span class="product-card-price">500 ₽</span>
               <span>Подробнее</span>
             </a>
           </li>
           <li class="product-item">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="#" width="360" height="380" alt="Профессиональная селфи-палка">
-              <h3 class="product-card-title">Профессиональная селфи-палка</h3>
+              <figure>
+                <img class="product-card-image" src="#" width="360" height="380" alt="Селфи-палка для качественных снимков">
+                <figcaption>Профессиональная селфи-палка</figcaption>
+              </figure>
               <span class="product-card-price">1 500 ₽</span>
               <span>Подробнее</span>
             </a>
           </li>
           <li class="product-item">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="#" width="360" height="380" alt="Непотопляемая селфи-палка">
-              <h3 class="product-card-title">Непотопляемая селфи-палка</h3>
+              <figure>
+                <img class="product-card-image" src="#" width="360" height="380" alt="Непотопляемая селфи-палка">
+                <figcaption>Непотопляемая селфи-палка</figcaption>
+              </figure>
               <span class="product-card-price">2 500 ₽</span>
               <a href="">Подробнее</a>
             </a>
           </li>
           <li class="product-item">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="#" width="360" height="380" alt="Селфи-палка в виде руки">
-              <h3 class="product-card-title">Селфи-палка «Следуй за мной»</h3>
+              <figure>
+                <img class="product-card-image" src="#" width="360" height="380" alt="Селфи-палка в виде руки">
+                <figcaption>Селфи-палка «Следуй за мной»</figcaption>
+              </figure>
               <span class="product-card-price">4 900 ₽</span>
               <a href="#">Подробнее</a>
             </a>
