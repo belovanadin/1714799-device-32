@@ -242,4 +242,14 @@ body {
 
 .catalog-filter {
   background-color: #ebebeb;
+  width: 269px;
+  margin-right: 72px;
+}
+
+.catalog-products {
+  display: flex;
+}
+
+.catalog-right-column {
+  width: 760px;
 }
