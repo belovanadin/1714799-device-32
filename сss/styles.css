@@ -74,19 +74,43 @@ body {
 
 .header-container {
   background-color: #ffe17f;
+  color: #000000;
   box-sizing: border-box;
   padding-left: 60px;
   padding-right: 60px;
 }
 
 .page-header {
-  background: #ffe17f;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: minmax(40px, auto) minmax(50px, auto);
+  row-gap: 20px;
+  grid-template-areas:
+    "search user"
+    "nav nav";
+  width: 1080px;
+  padding: 79px 40px 0 40px;
   color: #000000;
 }
 
+.header-search {
+  grid-area: search;
+}
+
+.page-navigation {
+  grid-area: nav;
+}
+
+.users-navigation {
+  grid-area: user;
+  margin: 0;
+}
+
 .header-logo-link {
-  padding-left: 61px;
-  padding-top: 17px;
+  position: absolute;
+  left: 61px;
+  top: 17px;
 }
 
 .user-menu {
@@ -244,12 +268,41 @@ body {
 .page-footer {
   background-color: #444444;
   color: #ffffff;
-  padding-top: 62px;
+  position: relative;
 }
 
+.page-footer-container {
+  display: grid;
+  grid-template-columns: 300px 560px 300px;
+  grid-template-rows: minmax(38px, auto) minmax(40px, auto);
+  grid-template-areas:
+    "address nav phone"
+    ". social site";
+  row-gap: 49px;
+  width: 1160px;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-top: 133px;
+  padding-bottom: 61px;
+}
+
+/* ссылка - logo*/
+
 .footer-logo-link {
-  padding-top: 62px;
+  position: absolute;
+  top: 62px;
   left: auto;
+}
+
+/* Адрес и телефон */
+.contacts-address-text {
+  grid-area: address;
+  margin: 0;
+}
+
+.contacts-phone {
+  grid-area: phone;
+  justify-self: end;
 }
 
 .contacts-address-footer {
@@ -258,11 +311,10 @@ body {
   font-style: normal;
 }
 
-.page-footer-container {
-  display: flex;
-  width: 1160px;
-  justify-content: space-between;
-  margin: 0 auto;
+/* footer nav*/
+
+.footer-navigation {
+  grid-area: nav;
 }
 
 .footer-navigation-list {
@@ -286,18 +338,11 @@ body {
   text-transform: uppercase;
 }
 
-.catalog-filter {
-  background-color: #ebebeb;
-  width: 269px;
-  margin-right: 72px;
-}
+/* соц. сети*/
 
-.catalog-products {
-  display: flex;
-}
-
-.catalog-right-column {
-  width: 760px;
+.footer-social {
+  grid-area: social;
+  justify-self: center;
 }
 
 .footer-social-list {
@@ -318,4 +363,156 @@ body {
 
   outline: 1px dashed #ffe17f; /* рамки */
   outline-offset: -1px; /* рамки */
+}
+
+/* ссылка академия*/
+
+.academy-link {
+  grid-area: site;
+  justify-self: end;
+}
+
+/*внутренная страница*/
+/* каталог*/
+
+.inner-header {
+  box-sizing: border-box;
+  padding: 37px 0 49px 60px;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.breadcrumbs-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.breadcrumbs {
+  display: flex;
+}
+
+.breadcrumbs-item {
+  padding-right: 35px;
+}
+
+/*__________*/
+
+.catalog-conteiner {
+  box-sizing: border-box;
+	margin: 0px auto;
+	width: 1440px;
+	padding: 0px 20px;
+}
+
+.main-catalog {
+	background: hsl(0deg 0% 90%);
+}
+
+.catalog__layout {
+	--layout-gap: 70px;
+	display: grid;
+	grid-template-columns: 1fr 972px;
+	grid-template-rows: repeat(3, min-content);
+	gap: var(--layout-gap);
+}
+
+.catalog__layout::before {
+	content: "";
+	z-index: 0;
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+	margin-left: -100vw;
+	background-color: hsl(0deg 0% 86%);
+}
+
+.catalog__layout::after {
+	--outward-shift: max(200vw, calc(1440px * 2));
+	content: "";
+	z-index: 0;
+	grid-column: -2 / -1;
+	grid-row: 2 / 4;
+	margin-top: calc(-1 * var(--layout-gap));
+	margin-left: calc(-1 * var(--layout-gap));
+	width: calc(var(--outward-shift) - 100vw);
+	background-color: hsl(0deg 0% 100%);
+	transform: translatex(calc(-1 * var(--outward-shift)));
+	box-shadow: var(--outward-shift) 0px hsl(0deg 0% 100%);
+}
+
+.catalog-heading-filtration {
+	z-index: 1;
+	grid-area: 1 / 1;
+	padding: 12px 70px 12px 60px;
+}
+
+.catalog-filter {
+	grid-area: 2 / 1 / -1 / 2;
+	padding: 0px 70px 0px 60px;
+}
+
+.catalog-sorting {
+	grid-area: 1 / 2;
+	margin: 12px 0px;
+}
+
+.catalog-products {
+	z-index: 1;
+	grid-area: 2 / 2;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.catalog-pagination {
+	z-index: 1;
+	grid-area: 3 / 2;
+	margin: 0px;
+	margin-bottom: 70px;
+	padding: 0px;
+	list-style: none;
+}
+
+.sorting {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.products {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 40px;
+	width: 972px;
+}
+
+.product__item {
+	display: grid;
+	place-items: center;
+	width: 360px;
+	height: 460px;
+	font-size: 50px;
+	font-weight: 700;
+	background-color: hsl(0deg 0% 93% / 0.7);
+}
+
+.pagination {
+	display: flex;
+	gap: 30px;
+	padding: 25px 30px;
+	background-color: hsl(0deg 0% 92%);
+}
+
+.patination-item {
+	flex-shrink: 1;
+	flex-grow: 0;
+}
+
+.pagination-prev {
+	margin-right: auto;
+}
+
+.pagination-next {
+	margin-left: auto;
 }
