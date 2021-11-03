@@ -412,7 +412,7 @@ body {
 .catalog__layout {
 	--layout-gap: 70px;
 	display: grid;
-	grid-template-columns: 1fr 972px;
+	grid-template-columns: 1fr 762px;
 	grid-template-rows: repeat(3, min-content);
 	gap: var(--layout-gap);
 }
@@ -482,23 +482,19 @@ body {
 
 .sort-list {
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 10px;
+  height: 10px;
   list-style-type: none;
 
   outline: 1px dashed #000000; /* рамки */
   outline-offset: -1px; /* рамки */
 }
 
-.products {
-
-}
-
 .product-list {
   display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 40px;
-	width: 972px;
+	width: 760px;
   list-style-type: none;
   padding: 0;
 }
