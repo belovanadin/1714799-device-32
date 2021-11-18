@@ -28,7 +28,7 @@
           <a class="user-navigation-link link-cart link" href="">
             <span class="counter-cart">2</span>
             Корзина</a>
-            <div class="popover popover-cart popover-open visually-hidden">
+            <div class="popover popover-cart popover-open">
               <div class="popover-content">
                 <h2 class="visually-hidden">Корзина</h2>
                 <ul class="cart-items-list">
@@ -60,43 +60,55 @@
           </div>
         </li>
       </ul>
-      <nav class="page-navigation">
+      <nav class="page-navigation site-navigation">
         <ul class="navigation-list">
           <li class="navigation-item navigation-item-catalog">
-            <a class="navigation-link navigation-link-catalog link" href="#">Каталог товаров</a>
-            <ul class="dropdown-catalog dropdown-catalog-closed">
-              <li class="dropdown-catalog-item">
-                <a class="link" href="#">Виртуальная реальность</a>
-              </li>
-              <li class="dropdown-catalog-item">
-                <a class="link" href="#">Фитнес-браслеты</a>
-              </li>
-              <li class="dropdown-catalog-item">
-                <a class="link" href="#">Квадрокоптеры</a>
-              </li>
-              <li class="dropdown-catalog-item">
-                <a class="dropdown-catalog-link link" href="catalog.html">Моноподы для селфи</a>
-              </li>
-              <li class="dropdown-catalog-item">
-                <a class="link" href="#">Умные часы</a>
-              </li>
-              <li class="dropdown-catalog-item">
-                <a class="link" href="#">Экшн-камеры</a>
-              </li>
-            </ul>
+            <a class="navigation-link navigation-link-catalog link link-uppercase" href="catalog.html">Каталог товаров</a>
+            <div class="navigation-dropdown dropdown-catalog-closed">
+              <ul class="catalog-dropdown">
+                <li class="catalog-dropdown-item 1column">
+                  <ul class="dropdowm-catalog-subsection">
+                    <li class="dropdown-catalog-subsection-item">
+                      <a class="dropdown-catalog-link link" href="#">Виртуальная реальность</a>
+                    </li>
+                    <li class="dropdown-catalog-subsection-item">
+                      <a class="dropdown-catalog-link link" href="catalog.html">Моноподы для селфи</a>
+                    </li>
+                    <li class="dropdown-catalog-subsection-item">
+                      <a class="dropdown-catalog-link link" href="#">Экшн-камеры</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="catalog-dropdown-item 2column">
+                  <ul class="dropdowm-catalog-subsection">
+                    <li class="dropdown-catalog-subsection-item">
+                      <a class="dropdown-catalog-link link" href="#">Фитнес-браслеты</a>
+                    </li>
+                    <li class="dropdown-catalog-subsection-item">
+                      <a class="dropdown-catalog-link link" href="#">Умные часы</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="catalog-dropdown-item 3column">
+                  <a class="dropdown-catalog-link link" href="#">Квадрокоптеры</a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="navigation-item navigation-item-delivery">
-            <a class="navigation-link navigation-link-delivery link" href="#">Доставка</a>
+            <a class="navigation-link navigation-link-delivery link link-uppercase" href="#">Доставка</a>
           </li>
           <li class="navigation-item navigation-item-warranty">
-            <a class="navigation-link navigation-link-warranty link" href="#">Гарантия</a>
+            <a class="navigation-link navigation-link-warranty link link-uppercase" href="#">Гарантия</a>
           </li>
           <li class="navigation-item navigation-item-contacts">
-            <a class="navigation-link navigation-link-contacts link" href="#">Контакты</a>
+            <a class="navigation-link navigation-link-contacts link link-uppercase" href="#">Контакты</a>
           </li>
         </ul>
       </nav>
     </header>
+
+
     <main class="main-container">
       <h1 class="visually-hidden">Интернет-магазин «Девайс»</h1>
       <section class="slider-product content-container">
@@ -321,27 +333,27 @@
       </div>
     </footer>
 
-    <div class="modal-container">
-      <div class="modal">
+   <div class="modal-container modal-container-close modal">
+      <div class="modal-header">
         <h2 class="modal-title reset-indent title-1">Доставка под заказ</h2>
         <button class="modal-close-button">
           <img class="modal-close-icon" src="img/delete.svg" width="26" height="26" alt="Закрыть">
           <span class="visually-hidden">Закрыть</span>
         </button>
-        <form class="order-form" action="https://echo.htmlacademy.ru/" method="POST">
+        <form class="modal-form" action="https://echo.htmlacademy.ru/" method="POST">
           <div class="field-group order-form-name">
-            <label class="form-label" for="order-name">Ваше имя:</label>
-            <input class="field" type="text" id="order-name" name="order-name" placeholder="Имя Фамилия" required>
+            <label class="modal-form-label" for="order-name">Ваше имя:</label>
+            <input class="modal-form-field" type="text" id="order-name" name="order-name" placeholder="Имя Фамилия" required>
             <span class="field-subtitle red">Пожалуйста, предствьтесь</span>
           </div>
           <div class="field-group order-form-email">
-            <label class="form-label" for="order-email">Ваш e-mail:</label>
-            <input class="field" type="text" id="order-email" name="order-email" placeholder="krasotka92@mail.ru" required>
+            <label class="modal-form-label" for="order-email">Ваш e-mail:</label>
+            <input class="modal-form-field" type="text" id="order-email" name="order-email" placeholder="krasotka92@mail.ru" required>
             <span class="field-subtitle">Забавный у вас адрес</span>
           </div>
           <div class="field-group order-form-what">
             <label class="form-label" for="order-what">Что нужно привезти:</label>
-            <input class="field" type="text" id="order-what" name="order-what" placeholder="В свободной форме" required>
+            <input class="modal-form-field" type="text" id="order-what" name="order-what" placeholder="В свободной форме" required>
           </div>
           <div class="field-group order-form-quantity">
             <label class="form-label" for="order-quantity">Количество:</label>
@@ -369,6 +381,5 @@
         </form>
       </div>
     </div>
-
   </body>
 </html>
