@@ -333,51 +333,56 @@
       </div>
     </footer>
 
-   <div class="modal-container modal-container-close modal">
-      <div class="modal-header">
+   <div class="modal-container modal-container-close">
+      <div class="modal-header modal">
         <h2 class="modal-title reset-indent title-1">Доставка под заказ</h2>
         <button class="modal-close-button">
-          <img class="modal-close-icon" src="img/delete.svg" width="26" height="26" alt="Закрыть">
           <span class="visually-hidden">Закрыть</span>
         </button>
         <form class="modal-form" action="https://echo.htmlacademy.ru/" method="POST">
-          <div class="field-group order-form-name">
-            <label class="modal-form-label" for="order-name">Ваше имя:</label>
-            <input class="modal-form-field" type="text" id="order-name" name="order-name" placeholder="Имя Фамилия" required>
-            <span class="field-subtitle red">Пожалуйста, предствьтесь</span>
-          </div>
-          <div class="field-group order-form-email">
-            <label class="modal-form-label" for="order-email">Ваш e-mail:</label>
-            <input class="modal-form-field" type="text" id="order-email" name="order-email" placeholder="krasotka92@mail.ru" required>
-            <span class="field-subtitle">Забавный у вас адрес</span>
-          </div>
-          <div class="field-group order-form-what">
-            <label class="form-label" for="order-what">Что нужно привезти:</label>
-            <input class="modal-form-field" type="text" id="order-what" name="order-what" placeholder="В свободной форме" required>
-          </div>
-          <div class="field-group order-form-quantity">
-            <label class="form-label" for="order-quantity">Количество:</label>
-            <button class="botton-info" type="button">i</button>
-            <div class="info-hint">
-              <p class="info-hint-text reset-indent">Постараемся найти, сколько нужно. Привезём сколько получится по
-                требованиямк провозу багажа.</p>
+          <div class="modal-form-grid">
+            <div class="field-group order-form-name">
+              <label class="modal-form-label" for="order-name">Ваше имя:</label>
+              <input class="modal-form-field" type="text" id="order-name" name="order-name" placeholder="Имя Фамилия" required>
+              <span class="modal-form-icon modal-icon-name"></span>
+              <span class="field-subtitle error-modal-text">Пожалуйста, предствьтесь</span>
             </div>
-            <span class="visually-hidden">Кнопка информация</span>
-            <div class="quantity-block">
-              <button class="btn-quantity minus" type="button"></button>
-              <span class="visually-hidden">Кнопка минус</span>
-              <input class="quantity" type="number" id="order-quantity" name="order-quantity" value="1">
-              <button class="btn-quantity plus" type="button"></button>
-              <span class="visually-hidden">Кнопка плюс</span>
+            <div class="field-group order-form-email">
+              <label class="modal-form-label" for="order-email">Ваш e-mail:</label>
+              <input class="modal-form-field" type="email" id="order-email" name="order-email" placeholder="krasotka92@mail.ru" required>
+              <span class="modal-form-icon modal-icon-email"></span>
+              <span class="field-subtitle">Забавный у вас адрес</span>
+            </div>
+            <div class="field-group order-form-comment">
+              <label class="modal-form-label" for="order-comment">Что нужно привезти:</label>
+              <textarea class="modal-form-field modal-form-field-comment" id="order-comment" name="order-comment" placeholder="В свободной форме" required></textarea>
+            </div>
+            <div class="field-group order-form-quantity">
+              <label class="modal-form-label" for="order-quantity">Количество:
+                <span class="info-hint">
+                  <span class="info-tooltip info-popover">
+                    <span class="info-popover-content">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям<br> к провозу багажа.</span>
+                  </span>
+                </span>
+              </label>
+              <div class="quantity-block">
+                <input class="modal-form-field modal-form-field-quantity" type="number" id="order-quantity" name="order-quantity" value="1">
+                <button class="button-quantity button-quantity-minus" type="button">
+                  <span class="visually-hidden">Кнопка минус</span>
+                  <svg class="counter-button-icon" width="16" height="16" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 7H0V9H16V7Z"/>
+                  </svg>
+                </button>
+                <button class="button-quantity button-quantity-plus" type="button">
+                  <span class="visually-hidden">Кнопка плюс</span>
+                  <svg class="counter-button-icon"  width="16" height="16" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 7H9V0H7V7H0V9H7V16H9V9H16V7Z"/>
+                    </svg>
+                </button>
+              </div>
             </div>
           </div>
           <button class="button button-order-submit" type="submit">Отправить</button>
-          <span class="visually-hidden">Кнопка отправить</span>
-          <div class="popover popover-info visually-hidden">
-            <p class="popover-info-text">
-              Постараемся найти, сколько нужно. Привезём сколько получится по требованиям<br>к провозу багажа.
-            </p>
-          </div>
         </form>
       </div>
     </div>
